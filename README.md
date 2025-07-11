@@ -1,6 +1,6 @@
 # Ajay Deep's Portfolio
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-React-blue)](https://ajaydeep-portfolio.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-React-blue)](https://this-is-aj.vercel.app/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/Connect-LinkedIn-blue)](https://www.linkedin.com/in/ajayqc/)
 ---
@@ -26,7 +26,7 @@ Welcome to **Ajay's Portfolio** – a showcase of 14+ years of excellence in **Q
 
 ## 🌐 Demo
 
-Explore the live portfolio [here](https://ajaydeep-portfolio.vercel.app/).
+Explore the live portfolio [here](https://this-is-aj.vercel.app/).
 
 ## 💻 Technologies Used
 
@@ -80,4 +80,4 @@ Contributions are welcome! If you have any suggestions or improvements, feel fre
 
 ## 📬 Contact
 
-Feel free to reach out via [email](https://ajaydeep-portfolio.vercel.app/connect) or connect with me on [LinkedIn](https://www.linkedin.com/in/ajayqc/).
+Feel free to reach out via [email](https://this-is-aj.vercel.app/connect) or connect with me on [LinkedIn](https://www.linkedin.com/in/ajayqc/).
