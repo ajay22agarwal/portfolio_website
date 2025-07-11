@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Skills.css";
 import skillsData from "../Skills/Skills.json";
 // import { useNavigate } from 'react-router-dom';
-// import Certifications from "../Certification/Certifications";
+import Certifications from "../Certification/Certifications";
 
 const Skills = () => {
   const [expandedSkill, setExpandedSkill] = useState(null);
@@ -110,9 +110,9 @@ const Skills = () => {
               )}
             </div>
           )}
-          {/* <div className="certifications-section">
+          <div className="certifications-section">
             <Certifications limit={6} />
-            <div className="view-all-button-container">
+            {/* <div className="view-all-button-container">
               <button
                 className="view-all-button"
                 onClick={viewAllCertifications}
@@ -120,8 +120,8 @@ const Skills = () => {
               >
                 Show More
               </button>
-            </div>
-          </div> */}
+            </div> */}
+          </div>
         </div>
       )}
     </div>
