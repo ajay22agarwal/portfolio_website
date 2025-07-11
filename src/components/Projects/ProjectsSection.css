@@ -1,0 +1,243 @@
+.projects-section {
+  padding: 2rem;
+  padding-top: 32px; /* Extra top padding to offset the navbar */
+  background: var(--bg-color); /* Ensure this CSS variable is defined */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading style */
+.projects-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Row container for each set of three cards */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 85px; /* Vertical space between rows */
+  width: 100%;
+  max-width: 720px; /* Only 3 cards per row */
+}
+
+/* Glass card styles */
+.glass {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  background: linear-gradient(var(--project-card), transparent);
+  border: 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 16px var(--accent-color), 0 4px 6px var(--accent-color),
+    0 0 0 0px var(--accent-color), inset 0 0 8px var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1.5s ease, margin 0.5s ease;
+  border-radius: 10px;
+  backdrop-filter: blur(9px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+/* Apply a negative left margin for cards except the first in each row */
+.row .glass:not(:first-child) {
+  margin-left: -105px; /* Adjust as needed */
+}
+
+/* Hover effect: reset rotation and left margin for separation */
+.row:hover .glass {
+  transform: rotate(0deg) !important;
+  margin-left: 30px;
+}
+
+/* Pseudo-element for the project name at the bottom of the card */
+.glass::before {
+  text-align: center;
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--bottom-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  border-radius: 9px;
+}
+
+/* SVG icon styles for card icons */
+.glass svg {
+  font-size: 2.5em;
+}
+
+/* Additional inner card styling */
+.card-content {
+  text-align: center;
+  color: var(--text-color);
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+}
+
+/* Code icon link positioned near the left border of the card */
+.code-icon-link {
+  position: absolute;
+  left: 10px; /* Adjust to position closer to the border */
+  top: 70%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  font-size: 0.5rem;
+  text-decoration: none;
+  border: 1px solid var(--text-color); /* Border around the icon */
+  border-radius: 50%; /* Makes the border circular */
+  padding: 0.3rem; /* Space around the icon */
+  background: transparent; /* Transparent by default */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Hover effect: Fill the background white and change icon color */
+.code-icon-link:hover {
+  background: var(--modal-bg); /* Circle fills white */
+  color: var(--accent-color); /* Icon changes to accent color */
+  border-color: var(--accent-color); /* Optional: Make the border white */
+}
+
+/* Technologies tag styling (if used) */
+.technologies .tech {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: rotate(calc(var(--r) * 1deg)) scale(0.9); /* Slightly scaled down */
+  }
+  to {
+    opacity: 1;
+    transform: rotate(calc(var(--r) * 1deg)) scale(1); /* Restore original scale */
+  }
+}
+
+/* Apply animations to heading and cards */
+.projects-heading {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.glass {
+  opacity: 0;
+  animation: fadeInScale 1s ease-in-out forwards;
+  animation-delay: var(--delay);
+}
+
+@media (max-width: 768px) {
+  /* Keep heading style but reduce font size */
+  .projects-heading {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  /* Keep same row layout but adjust spacing */
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px; /* Reduce space between rows */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Maintain glass effect but reduce card size */
+  .glass {
+    width: 180px; /* Reduce size to fit smaller screens */
+    height: 180px;
+    margin-left: -80px; /* Adjust overlap */
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+
+  /* Reduce spacing between cards */
+  .row:hover .glass {
+    margin-left: 20px; /* Keep hover effect but reduce spacing */
+  }
+
+  /* Adjust text size inside cards */
+  .glass::before {
+    font-size: 0.5rem;
+    height: 35px;
+  }
+
+  /* Adjust code icon */
+  .code-icon-link {
+    left: 5px; /* Closer to left */
+    top: 75%;
+    font-size: 0.6rem;
+    padding: 0.2rem;
+  }
+
+  /* Keep icon size smaller */
+  .glass svg {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust for very small screens */
+  .projects-heading {
+    font-size: 1.8rem;
+  }
+
+  .glass {
+    width: 160px;
+    height: 160px;
+    margin-left: -60px; /* Adjust overlap */
+  }
+
+  .row:hover .glass {
+    margin-left: 15px;
+  }
+
+  /* Reduce code icon size */
+  .code-icon-link {
+    font-size: 0.5rem;
+    padding: 0.15rem;
+  }
+
+  .glass svg {
+    font-size: 1.8em;
+  }
+}

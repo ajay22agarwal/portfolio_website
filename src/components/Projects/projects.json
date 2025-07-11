@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Portfolio Website",
+    "link": "https://github.com/37rohan/Portfolio_Website",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Used Car Price Prediction",
+    "link": "https://github.com/37rohan/Used_Car_Price_Prediction",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Housing Analysis in Brazil",
+    "link": "https://github.com/37rohan/Housing-in-Brazil",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Faulty Calculator",
+    "link": "https://github.com/37rohan/Faulty_Calculator",
+    "linkType": "View Code",
+    "description": "A dashboard using Python's Dash framework to visualize complex datasets.",
+    "technologies": ["Python", "Dash", "Plotly", "Pandas"]
+  },
+  {
+    "name": "Guessing a Number",
+    "link": "https://github.com/37rohan/Guessing_a_Number",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Weather Info",
+    "link": "https://github.com/37rohan/Weather_App",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Olympic Analysis",
+    "link": "https://github.com/37rohan/Olympic_Analysis",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Text Summarizer",
+    "link": "https://github.com/rohangoyal",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Snake Water Gun Game",
+    "link": "https://github.com/37rohan/Snake_Water_Gun_Game",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Dynamic Student Enrollment Form",
+    "link": "https://github.com/37rohan/Dynamic_Student_Enrollment_Form",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Breast Cancer Prediction",
+    "link": "https://github.com/37rohan/Breast_Cancer_Prediction",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  },
+  {
+    "name": "Inventory Management System",
+    "link": "https://github.com/37rohan/Inventory_Management_System",
+    "linkType": "View Code",
+    "description": "This very website built with React and TypeScript.",
+    "technologies": ["React", "TypeScript", "CSS", "HTML"]
+  }
+]
