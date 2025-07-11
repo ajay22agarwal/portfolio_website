@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Testing & QA Tools",
+    "subSkills": [
+      "Manual & Automated Testing",
+      "Postman (API Testing)",
+      "JMeter (Certified)",
+      "Katalon Studio",
+      "QTP",
+      "Defect Tracking Tools",
+      "Test Director"
+    ]
+  },
+  {
+    "name": "Test Management",
+    "subSkills": [
+      "Agile (Scrum), Waterfall",
+      "SDLC, STLC",
+      "CI/CD Integration",
+      "Sprint Planning",
+      "Test Plan & Test Case Design",
+      "Data Warehousing",
+      "Bug Life Cycle Management",
+      "Retrospectives"
+    ]
+  },
+  {
+    "name": "Cloud & Deployment",
+    "subSkills": ["AWS (Amazon EC2, S3)", "Microsoft Azure", "IBM Cloud", "Google App Engine", "Salesforce Heroku", "Deployment Automation" ,"Release Management"]
+  },
+  {
+    "name": "Databases & Backend",
+    "subSkills": ["MySQL, Oracle, PostgreSQL", "MongoDB", "Database Testing", "Database Validation", "Data Migration Testing", "SQL Queries"]
+  },
+  {
+    "name": "Version Control & Frameworks",
+    "subSkills": [
+      "GitHub, SVN",
+      "Microsoft .NET Framework",
+      "VB.NET, C#.NET (QA scripting)",
+      "Open Test Architecture API"
+    ]
+  },
+  {
+    "name": "CMS & Enterprise Tools",
+    "subSkills": ["Sitecore, Kentico CMS", "SAP (ERP Testing)", "Salesforce CRM","Cross-browser Testing", "Windows OS Environments"]
+  }
+]

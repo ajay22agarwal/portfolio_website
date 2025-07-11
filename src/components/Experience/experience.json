@@ -1,0 +1,82 @@
+[
+  {
+    "company": "Publicis Sapient",
+    "position": "Team Lead – QA",
+    "duration": "Apr 2024 – Present",
+    "description": [
+      "Spearheading enterprise-level QA strategy execution across agile squads to align delivery with evolving business expectations.",
+      "Mentoring cross-functional QA teams while driving adoption of advanced practices in performance, security, and API testing.",
+      "Leading quality metrics tracking, sprint health reviews, and cross-team retrospectives to foster continuous improvement."
+    ]
+  },
+  {
+    "company": "Metacube Softwares",
+    "position": "Technology Analyst – QA",
+    "duration": "Sept 2021 – Mar 2024",
+    "description": [
+      "Designed and implemented end-to-end API and functional automation suites, reducing manual regression effort by 60%.",
+      "Defined QA workflows across Agile releases, contributing to sprint planning, estimation, and technical grooming sessions.",
+      "Acted as QA representative in product roadmap discussions, providing early insights on testability and risk areas."
+    ]
+  },
+  {
+    "company": "Sarvika Technologies",
+    "position": "Team Lead – QA",
+    "duration": "Nov 2017 – Aug 2021",
+    "description": [
+      "Managed all QA functions across large-scale multi-module platforms with heavy business logic and integrations.",
+      "Created reusable test libraries and custom utilities to streamline UI, database, and API validation tasks.",
+      "Implemented risk-based testing approaches to optimize test coverage and delivery confidence for mission-critical releases."
+    ]
+  },
+  {
+    "company": "Rams Creative",
+    "position": "Team Lead – QA",
+    "duration": "Jan 2017 – Oct 2017",
+    "description": [
+      "Directed test execution for fast-delivery client projects, emphasizing cross-device testing and pixel-perfect validation.",
+      "Built QA status dashboards to provide stakeholders with transparent visibility into issue trends and test outcomes.",
+      "Enhanced delivery speed by introducing lightweight regression packs tailored for short-cycle releases."
+    ]
+  },
+  {
+    "company": "Dreamsoft 4u",
+    "position": "QA Manager",
+    "duration": "May 2016 – Dec 2016",
+    "description": [
+      "Established QA governance for HIPAA-compliant healthcare platforms, ensuring accuracy and data privacy.",
+      "Coordinated pre-release validations with cross-disciplinary teams including development, product, and compliance.",
+      "Introduced static test data generation and health domain-specific checklists to strengthen testing coverage."
+    ]
+  },
+  {
+    "company": "Unicolumn Softwares",
+    "position": "QA Team Lead",
+    "duration": "Oct 2014 – Apr 2016",
+    "description": [
+      "Executed regression and exploratory testing for .NET-based enterprise apps with backend-heavy functionality.",
+      "Drafted user-centric test scenarios and managed test environments for multiple release streams.",
+      "Actively participated in stakeholder meetings to provide insights on release readiness and defect triage."
+    ]
+  },
+  {
+    "company": "AnkTech Softwares",
+    "position": "Senior QA Engineer",
+    "duration": "Sept 2010 – Sept 2014",
+    "description": [
+      "Led test preparation for medium-scale projects, including requirements reviews and test data planning.",
+      "Validated cross-browser behavior and content alignment on marketing and transactional platforms.",
+      "Documented issue patterns and participated in RCA (Root Cause Analysis) to reduce repeat bugs."
+    ]
+  },
+  {
+    "company": "Konstant Infosolutions",
+    "position": "QA Engineer",
+    "duration": "Sept 2008 – Aug 2010",
+    "description": [
+      "Prepared basic functional test cases from wireframes and specifications for small business websites.",
+      "Assisted senior testers with regression testing and daily bug verification cycles.",
+      "Gained exposure to manual test processes, defect lifecycle, and client validation support activities."
+    ]
+  }
+]

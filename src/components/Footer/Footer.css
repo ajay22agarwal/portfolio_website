@@ -1,0 +1,30 @@
+/* Footer Styles */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background: var(--bg-footer);
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  font-size: 14px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+body.light-theme .footer {
+  background: var(--lg-footer);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

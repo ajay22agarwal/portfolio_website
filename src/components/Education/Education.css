@@ -1,0 +1,386 @@
+/* Education Section Styling */
+.education-section {
+  padding: 60px 35px 60px 35px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.education-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure the heading takes full width of the container */
+  animation: fadeIn 1s ease-in-out forwards; /* Add fade-in animation */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-15px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+}
+
+.education-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--accent-color);
+  transform: translateX(-50%);
+}
+
+.education-checkpoint {
+  position: absolute;
+  left: 50%;
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+
+  /* Apply the zoom out animation */
+  animation: zoomIn 0.9s ease backwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5); /* Start bigger */
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* End at normal size */
+    opacity: 1;
+  }
+}
+
+.education-wrapper:nth-child(1) .education-checkpoint {
+  animation-delay: 0.5s;
+}
+
+.education-wrapper:nth-child(2) .education-checkpoint {
+  animation-delay: 1s;
+}
+
+.education-wrapper:nth-child(3) .education-checkpoint {
+  animation-delay: 1.5s;
+}
+
+/* Icon inside the checkpoint */
+.checkpoint-icon {
+  font-size: 24px; /* Adjust the size as needed */
+  color: #fff; /* Adjust the color as needed */
+}
+
+/* Education Card */
+.education-card {
+  background-color: var(--card-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: absolute;
+  width: 37%;
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+  opacity: 0; /* Initially hidden */
+  animation-fill-mode: forwards; /* Ensure the animation effect stays */
+}
+
+/* Duration inside the card */
+.education-card .duration {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Left-side cards (odd ones) */
+.education-card.odd {
+  left: -15px;
+  transform: translateX(25%);
+  animation: slideInLeft 0.5s ease-in-out forwards; /* Add slide-in animation for left cards */
+}
+
+/* Right-side cards (even ones) */
+.education-card.even {
+  right: -20px;
+  transform: translateX(-25%);
+  animation: slideInRight 0.5s ease-in-out forwards; /* Add slide-in animation for right cards */
+}
+
+/* Add delays to each card's animation */
+.education-wrapper:nth-child(1) .education-card {
+  animation-delay: 0.5s;
+}
+
+.education-wrapper:nth-child(2) .education-card {
+  animation-delay: 1s;
+}
+
+.education-wrapper:nth-child(3) .education-card {
+  animation-delay: 1.5s;
+}
+
+/* Add more delays as needed */
+.education-wrapper:nth-child(4) .education-card {
+  animation-delay: 2s;
+}
+
+.education-wrapper:nth-child(5) .education-card {
+  animation-delay: 2.5s;
+}
+
+/* Triangles pointing towards the timeline */
+
+/* Left-side cards (odd) - Triangle on the RIGHT side */
+.education-card.odd::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid var(--triangle-color); /* Triangle points right */
+  right: -10px; /* Move triangle to the right side of the left card */
+  top: 25px; /* Position slightly down from the top */
+  transform: translateY(-50%) rotate(180deg); /* Align with the top and rotate 180 degrees */
+  z-index: 2; /* Ensure triangle is above the checkpoint */
+}
+
+/* Right-side cards (even) - Triangle on the LEFT side */
+.education-card.even::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid var(--triangle-color); /* Triangle points left */
+  left: -10px; /* Move triangle to the left side of the right card */
+  top: 25px; /* Position slightly down from the top */
+  transform: translateY(-50%) rotate(180deg); /* Align with the top and rotate 180 degrees */
+  z-index: 2; /* Ensure triangle is above the checkpoint */
+}
+
+/* Date next to the checkpoint */
+.education-date {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: var(--text-color);
+  z-index: 2; /* Ensure date is above the checkpoint */
+}
+
+/* Date for left-side cards (odd) */
+.education-date.odd {
+  right: 480px; /* Position to the right of the checkpoint */
+}
+
+/* Date for right-side cards (even) */
+.education-date.even {
+  left: 490px; /* Position to the left of the checkpoint */
+}
+
+.institution-name {
+  font-size: 1rem; /* Adjust the font size as needed */
+  font-weight: 700; /* Make it bold */
+  margin-bottom: 10px; /* Add some spacing below the heading */
+}
+
+/* Degree Name */
+.degree-name {
+  font-size: 0.8rem; /* Smaller font size for degree name */
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.description {
+  font-size: 1.2rem; /* Smallest font size for description */
+  font-weight: 400;
+}
+
+/* Loading Container */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Bouncing Ball Styles */
+.bouncing-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  animation: bounce-in 2s ease-in-out 2, expand-out 1.5s 2s forwards;
+}
+
+/* Bounce Animation */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0) translateY(-100px);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.2) translateY(-20px);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(1.2) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Expand Animation */
+@keyframes expand-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(30);
+    opacity: 0;
+  }
+}
+
+/* Responsive Adjustments for small screens (1185px or smaller) */
+@media (max-width: 1185px) {
+  .education-card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    position: relative; /* Change to relative positioning */
+    left: auto; /* Reset left positioning */
+    right: auto; /* Reset right positioning */
+    top: auto; /* Reset top positioning */
+    margin-bottom: 40px; /* Add spacing between cards */
+    left: 20px !important;
+  }
+
+  .education-checkpoint {
+    left: 0%; /* Center checkpoint horizontally */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Align with the top and center horizontally */
+    width: 40px; /* Decrease size */
+    height: 40px; /* Decrease size */
+  }
+
+  /* Hide the date outside the card on small screens */
+  .education-date {
+    display: none;
+  }
+
+  .education-timeline::before {
+    left: 0; /* Move the timeline line to the left */
+  }
+
+  .education-timeline {
+    display: block; /* Stack cards vertically */
+  }
+
+  .education-wrapper {
+    margin-bottom: 40px; /* Add spacing between each card */
+  }
+
+  /* Reset top property for 2nd and 3rd cards on small screens */
+  .education-wrapper:nth-child(2) .education-card,
+  .education-wrapper:nth-child(3) .education-card {
+    top: 4px !important; /* Fixed top position */
+    left: 20px !important;
+  }
+
+  /* Adjust left property for 2nd card on small screens */
+  .education-wrapper:nth-child(2) .education-card {
+    left: -17px !important; /* Adjust left position */
+  }
+
+  /* Show duration inside the card on small screens */
+  .education-card .duration {
+    display: block;
+  }
+
+  /* Position triangles for odd cards on the left side on small screens */
+  .education-card.odd::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid var(--triangle-color); /* Triangle points left */
+    left: -10px; /* Move triangle to the left side of the card */
+    top: 25px; /* Position slightly down from the top */
+    transform: translateY(-50%) rotate(180deg); /* Align with the top and rotate 180 degrees */
+    z-index: 2; /* Ensure triangle is above the checkpoint */
+  }
+
+  /* Remove the right-facing triangle for odd cards on small screens */
+  .education-card.odd::after {
+    border-right: none; /* Remove the right-facing triangle */
+  }
+}

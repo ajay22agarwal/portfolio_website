@@ -1,0 +1,95 @@
+:root {
+  --bg-color: #0a0a0a; /* Dark mode background */
+  --text-color: white; /* Default text color (for dark mode) */
+  --light-bg-color: #f1f1f1; /* Light theme background color */
+  --light-text-color: #0a0a0a; /* Light theme text color */
+  --accent-color: #d136ca; /* Accent color */
+  --dark-slider-bg: url("../src/assets/dark.jpg"); /* Dark theme slider background */
+  --light-slider-bg: url("../src/assets/light.jpg"); /* Light theme slider background */
+}
+
+body.dark-theme {
+  --bg-color: #0a0a0a;
+  --text-color: white;
+  --accent-color: #d136ca;
+  --triangle-color: white;
+  --modal-bg: #000000d9;
+  --project-card: #2e2b2b95;
+  --icon-color: #f1f1f1;
+  --card-color: #161616;
+  --bottom-color:#ffffff0d;
+  --placeholder: #ffffff99;
+  --box-hover: #ffffff33;
+  --bg-footer: #ffffff1a;
+}
+
+body.light-theme {
+  --bg-color: #f1f1f1;
+  --text-color: #0a0a0a;
+  --accent-color: #d136ca;
+  --triangle-color: black;
+  --modal-bg: #7b7b7bd9;
+  --project-card: #89898995;
+  --icon-color: #0a0a0a;
+  --card-color: #cccccc;
+  --bottom-color:#0000000d;
+  --placeholder: #00000099;
+  --box-hover: #33333333;
+  --lg-footer:#0d00001a;
+}
+
+/* Global Loading State - Hides All Content Except Ball */
+body.loading * {
+  visibility: hidden; /* Hides all content, including navbar and home components */
+}
+
+body.loading .loader-ball {
+  visibility: visible; /* Ensures the ball is visible during loading */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme-specific styling */
+body.dark-theme {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.light-theme {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
+}
+
+.app-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+html,
+body {
+  height: 100%;
+  /* overflow: hidden; */
+  font-family: "Montserrat", sans-serif;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure particles are at the back */
+  pointer-events: none;
+}
+
+.navbar,
+.home {
+  position: relative;
+  z-index: 1; /* Ensure navbar and home components are above the particles */
+}

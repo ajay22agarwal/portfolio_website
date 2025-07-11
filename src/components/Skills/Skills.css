@@ -1,0 +1,411 @@
+/* Skills Section Styling */
+.hierarchy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.skills-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure the heading takes full width of the container */
+  animation: fadeIn 2s ease-in-out forwards; /* Add fade-in animation */
+}
+
+.node {
+  background-color: var(--card-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 30px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.manager {
+  background-color: var(--card-color);
+  width: 150px;
+  height: 80px; /* Fixed height for branches */
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-50px); /* Initial position for slideLeft */
+}
+
+.manager:nth-child(4),
+.manager:nth-child(5),
+.manager:nth-child(6) {
+  transform: translateX(50px); /* Initial position for slideRight */
+}
+
+.manager:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sub-managers {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sub-node {
+  background-color: var(--card-color);
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  text-align: center;
+  width: 150px;
+  height: 80px; /* Fixed height for sub-branches */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.line {
+  width: 2px;
+  height: 50px;
+  background-color: var(--accent-color);
+  margin: 0 auto;
+}
+
+.managers {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.vertical-line {
+  width: 50px;
+  height: 2px;
+  background-color: var(--accent-color);
+  margin: 0 5px;
+  align-self: center;
+}
+
+/* Animation for sub-skills */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sub-managers.visible {
+  opacity: 1;
+}
+
+.sub-managers.hidden {
+  opacity: 0;
+}
+
+/* Slide Down Animation for My Skills Heading */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.node.ceo {
+  animation: slideDown 2s ease forwards; /* Increased duration to 2 seconds */
+}
+
+/* Slide Left and Right Animations for Skill Branches */
+@keyframes slideLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.node.manager:nth-child(1) {
+  animation: slideLeft 2s ease forwards;
+}
+
+.node.manager:nth-child(2) {
+  animation: slideLeft 2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.node.manager:nth-child(3) {
+  animation: slideLeft 2s ease forwards;
+  animation-delay: 1s;
+}
+
+.node.manager:nth-child(4) {
+  animation: slideRight 2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.node.manager:nth-child(5) {
+  animation: slideRight 2s ease forwards;
+  animation-delay: 1s;
+}
+
+.node.manager:nth-child(6) {
+  animation: slideRight 2s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* Media Query for screens with max-width: 1185px */
+@media (max-width: 1185px) {
+  .hierarchy {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .node,
+  .manager,
+  .sub-node {
+    width: 100%; /* Reduced width to fit screen */
+    margin: 10px 0; /* Adjusted margin for smaller elements */
+    padding: 8px; /* Reduced padding for better fit */
+  }
+
+  .manager {
+    width: 120px; /* Decreased width for smaller screens */
+    height: 60px; /* Decreased height for smaller screens */
+  }
+
+  .sub-node {
+    width: 120px; /* Decreased width for sub-branches on small screens */
+    height: 60px; /* Decreased height for sub-branches on small screens */
+  }
+
+  .sub-sub-node {
+    width: 110px; /* Decreased width for sub-sub-branches */
+    height: 50px; /* Decreased height for sub-sub-branches */
+  }
+
+  .managers {
+    flex-direction: column;
+    align-items: normal;
+    position: relative; /* Add relative positioning */
+    padding: 25px 1px 25px 20px;
+    margin-top: -4px;
+    font-size: 14px;
+    width: 75%;
+  }
+
+  /* Position sub-branches to the right of branches */
+  .sub-managers {
+    display: flex;
+    flex-direction: column; /* Stack sub-branches vertically for small screens */
+    justify-content: center;
+    gap: 0px;
+    position: absolute;
+    top: 184px;
+    left: 55%;
+    transform: translateX(-50%);
+    z-index: 9;
+    opacity: 1;
+    width: 32%;
+    font-size: 14px;
+  }
+
+  .sub-sub-managers {
+    display: flex;
+    flex-direction: column; /* Stack sub-sub-branches vertically */
+    justify-content: center;
+    gap: 0px;
+    position: absolute;
+    top: 0px;
+    left: 140%; /* Place sub-sub-branches to the right of sub-branches */
+    transform: translateX(-50%);
+    z-index: 5;
+    opacity: 1;
+  }
+
+  .sub-sub-node {
+    background-color: var(--card-color);
+    padding: 10px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+    height: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sub-sub-node:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .line,
+  .vertical-line {
+    display: none;
+  }
+
+  .node.manager {
+    margin: 10px 0;
+    width: 43%; /* Medium size */
+  }
+
+  .sub-node {
+    margin: 10px 0;
+    width: 90%; /* Medium size */
+  }
+
+  .sub-managers.visible {
+    opacity: 1;
+  }
+
+  .sub-managers.hidden {
+    opacity: 0;
+  }
+}
+
+/* Media Query for screens with min-width: 1185px */
+@media (min-width: 1185px) {
+  /* Make sure the sub-managers container is centered and arranged in a row */
+  .sub-managers {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between sub-branches */
+    justify-content: center;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  /* Ensure all sub-branches have the same dimensions as the branches */
+  .sub-node,
+  .sub-sub-node {
+    width: 150px; /* Same width as branches */
+    height: 80px; /* Same height as branches */
+    align-content: center;
+  }
+
+  /* Instead of hiding sub-sub branches, merge them inline with sub-branches */
+  .sub-sub-managers {
+    display: inline-flex; /* Display inline with the sub-nodes */
+    gap: 20px; /* Space between extra sub-branches */
+    align-items: center;
+  }
+
+  /* Remove any extra margins or positioning from sub-nodes if needed */
+  .sub-node:hover,
+  .sub-sub-node:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .line,
+  .vertical-line {
+    display: none;
+  }
+}
+
+/* Loading Container */
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Bouncing Ball Styles */
+.bouncing-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  animation: bounce-in 2s ease-in-out 2, expand-out 1.5s 2s forwards;
+}
+
+/* Bounce Animation */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0) translateY(-100px);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.2) translateY(-20px);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(1.2) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Expand Animation */
+@keyframes expand-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(30);
+    opacity: 0;
+  }
+}

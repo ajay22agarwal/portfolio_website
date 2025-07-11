@@ -1,0 +1,66 @@
+/* src/LoadingAnimation.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .loading-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    z-index: 9999;
+  }
+  
+  .ball {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    animation: bounce 1s ease-in-out infinite;
+    position: absolute;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+  }
+  
+  .content {
+    display: none;
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  /* Ball expanding animation */
+  .expanded {
+    animation: expand 0.5s forwards;
+  }
+  
+  @keyframes expand {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(100);
+      opacity: 0;
+    }
+  }
+  

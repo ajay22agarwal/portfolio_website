@@ -1,0 +1,243 @@
+/* Home Section Styling */
+.home-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.home-content {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-text p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.home-text h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  color: var(--accent-color); /* Changed color of the span */
+}
+
+h1 span {
+  color: var(--accent-color); /* Changed color of the span */
+}
+
+/* Typewriter Effect Text */
+.home-text h2 span {
+  color: #d136ca; /* Changed typewriter effect text color */
+  font-weight: bold;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styling for individual icons */
+.social-icons a {
+  font-size: 2rem;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Social icons in light theme should have black color */
+body.light-theme .social-icons a {
+  color: black;
+}
+
+body.light-theme .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+body.light-theme .facebook:hover {
+  color: #1a4195;
+}
+
+body.light-theme .instagram:hover {
+  color: #b52354;
+}
+
+body.light-theme .linkedin:hover {
+  color: #013d5d;
+}
+
+
+body.dark-theme .social-icons a:hover {
+  transform: scale(1.1);
+}
+
+body.dark-theme .facebook:hover {
+  color: #2b4d97;
+}
+
+body.dark-theme .instagram:hover {
+  color: #c72b5f;
+}
+
+body.dark-theme .linkedin:hover {
+  color: #016296;
+}
+
+/* Button Styling */
+.home-text button {
+  margin-top: 20px; /* Reduced margin-top for better spacing */
+  padding: 12px 25px; /* Adjusted padding for a bigger button */
+  font-size: 1rem; /* Adjusted font size */
+  font-weight: bold;
+  color: #d136ca; /* Text color */
+  background-color: transparent; /* Make the button background transparent */
+  border: 2px solid #d136ca; /* Add a border with color #d136ca */
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  perspective: 1000px;
+}
+
+.home-text button:hover {
+  transform: translateY(-5px) rotateX(10deg) rotateY(10deg); /* Apply 3D movement on hover */
+  background-color: #d136ca;
+  color: white;
+}
+
+/* Loader Ball */
+.loader-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #d136ca; /* Accent color for the ball */
+  position: fixed; /* Use fixed position to center the ball */
+  top: 50%;
+  left: 50%;
+  margin-left: -25px; /* Center the ball horizontally */
+  margin-top: -25px; /* Center the ball vertically */
+  animation: bounce-in 2s ease-in-out 2, expand-out 1.5s 2s forwards; /* Bounce 2-3 times then expand */
+  z-index: 9999; /* Ensure it's on top */
+  visibility: hidden; /* Hide the ball initially */
+}
+
+/* Bounce Animation for Ball (Bouncing 2-3 times) */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0) translateY(-100px);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.2) translateY(-20px);
+  }
+  50% {
+    transform: scale(1) translateY(0);
+  }
+  75% {
+    transform: scale(1.2) translateY(-10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for Ball Expanding and Covering Screen */
+@keyframes expand-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(30);
+    opacity: 0;
+  }
+}
+
+/* Ball Expanding After Loading */
+.loader-ball.expand {
+  animation: expand-out 1.5s forwards; /* Expands and fades out */
+}
+
+/* Content Visibility After Loading */
+.content-visible {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden-content {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .home-text p {
+    font-size: 1.2rem;
+  }
+
+  .home-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-text button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    bottom: 60px;
+    gap: 8px;
+    left:50%;
+  }
+
+  .social-icons a {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+}
